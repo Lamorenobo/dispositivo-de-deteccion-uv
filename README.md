@@ -56,6 +56,8 @@ Segunda Version:(Error)
 PCB FINAL:
 ![image](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/33144e16-bc5f-4f5a-9cc6-ff85843e0b53)
 ![IMG-20231119-WA0025](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/1a7ce271-ddc5-4419-be28-f555582dc895)
+# Archivo PCB:
+[proyectointroducción (1).zip](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405660/proyectointroduccion.1.zip)
 
 
 # Componentes en la PCB.....
