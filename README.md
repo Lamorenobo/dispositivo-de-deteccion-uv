@@ -1,4 +1,4 @@
-[codigo esp32 micropython (1).txt](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405623/codigo.esp32.micropython.1.txt)# Dispositivo de detección uv
+# Dispositivo de detección uv
 Nuestro dispositivo detecta la rediacion uv, y envia esta señal a una app en la cual dependiendo de el rango de  la radiacion se muestran las prevenciones que hay que tener para prevenir afectaciones por rayos UV
 ## Introducción
 Nuestro proyecto consiste en un dispositivo capaz de detectar la radiacion UV, el cual envia unas señales al microcontrolador(ESP-32, programado en C), y dependiendo el rango de intensidad de radiacion UV, se encarga de prender o apagar unos leds en el dispositivo los cuales  indican la peligrosidad de la radiacion en ese momento especifico. Paralelamente a esto,mediante la conexion Bluetooth entre el esp 32 y el celular, se le indica al usario las prevenciones que deberia tomar de acuerdo al indice de radiación UV que este indicando el microcontrolador, todo esto a travez de una aplicacion programada en app inventor.
@@ -33,7 +33,7 @@ Empezariamos, como es debido en todo proceso de creacion tecnologico, con el dia
 A continuación presentamos el circuito  del dispositivo de detección UV elaborado en kicad.
 <img src="https://i.postimg.cc/bJVkp9Hz/esquema-en-kicad.png">
 # Programacion del ESP-32 (Micropython)
-
+[codigo esp32 micropython (1).txt](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405623/codigo.esp32.micropython.1.txt)
 
 
 # Version (Protoboard)
