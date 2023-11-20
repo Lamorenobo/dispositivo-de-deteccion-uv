@@ -134,64 +134,7 @@ La otra parte del proyecto no tuvo mayores inconvenientes, si no hasta lampreuba
 Como solucion a esto pasamos todo el codigo del ESP-32 el cual estab en Micropython, a el lenguaje C.
 # Programacion ESP-32(C)
 [codigo esp32 micropython.txt](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405605/codigo.esp32.micropython.txt)
-###codigo del controlador ESP-32 y el sensor UV
-import time, machine
-from machine import ADC
-from time import sleep
-pin = machine.Pin(25, machine.Pin.IN)
-verde= machine.Pin(21, machine.Pin.OUT)
-amarillo = machine.Pin(19, machine.Pin.OUT)
-naranja = machine.Pin(18, machine.Pin.OUT)
-rojo = machine.Pin(5, machine.Pin.OUT)
-morado = machine.Pin(15, machine.Pin.OUT)
-buzzer = machine.Pin(23, machine.Pin.OUT)
 
-adc = ADC(pin)
-
-while True:
-    val = adc.read_u16()# dependiendo el valor se enciende cada led
-    print(val)
-    if val <= 8738 and val >= 0:
-        verde.on()
-        amarillo.off()
-        naranja.off()
-        rojo.off()
-        morado.off()
-        buzzer.off()
-        print("bajo")
-    elif val > 8738 and val <= 21845:
-        verde.off()
-        amarillo.on()
-        naranja.off()
-        rojo.off()
-        morado.off()
-        buzzer.off()
-        print("moderado")
-    elif val > 21845 and val<= 30583:
-        verde.off()
-        amarillo.off()
-        naranja.on()
-        rojo.off()
-        morado.off()
-        buzzer.off()
-        
-        print("alto")
-    elif val > 30583 and val<=43690 :
-        rojo.on()
-        verde.off()
-        amarillo.off()
-        naranja.off()
-        morado.off()
-        buzzer.off()
-        print("muy alto")
-    elif val > 43690:
-        morado.on()
-        verde.off()
-        amarillo.off()
-        naranja.off()
-        rojo.off()
-        buzzer.on()
-        print("extremo")
 ##se enciende la alarma
     sleep(1)
 
