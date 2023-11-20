@@ -36,6 +36,7 @@ A continuación presentamos el circuito  del dispositivo de detección UV elabor
 
 # Version (Protoboard)
 tras tener la programacion del microcrontolador y el esquema del circuito, procedimos a pasarlo todo a una protoboard y comprobar el funcionamiento de todo el dispositivo
+![IMG-20231101-WA0012](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/cd006ca4-e626-4ef7-86d0-6ea3b0fa4b34)
 
 
 
