@@ -79,8 +79,5 @@ https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/29cb1
 La otra parte del proyecto no tuvo mayores inconvenientes, si no hasta lampreuba final, ya que .................
 Como solucion a esto pasamos todo el codigo del ESP-32 el cual estab en Micropython, a el lenguaje C.
 # Programacion ESP-32(C)
-[codigo esp32 micropython.txt](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405605/codigo.esp32.micropython.txt)
-
-##se enciende la alarma
-
+[caodigo ESP32 c (1).txt](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405636/caodigo.ESP32.c.1.txt)
 # Aplicacion Final:......
