@@ -33,7 +33,7 @@ Empezariamos, como es debido en todo proceso de creacion tecnologico, con el dia
 A continuación presentamos el circuito  del dispositivo de detección UV elaborado en kicad.
 <img src="https://i.postimg.cc/bJVkp9Hz/esquema-en-kicad.png">
 # Programacion del ESP-32 (Micropython)
-###codigo del controlador ESP-32 y el sensor UV
+
 import time, machine
 from machine import ADC
 from time import sleep
@@ -44,9 +44,7 @@ naranja = machine.Pin(18, machine.Pin.OUT)
 rojo = machine.Pin(5, machine.Pin.OUT)
 morado = machine.Pin(15, machine.Pin.OUT)
 buzzer = machine.Pin(23, machine.Pin.OUT)
-
 adc = ADC(pin)
-
 while True:
     val = adc.read_u16()# dependiendo el valor se enciende cada led
     print(val)
@@ -73,7 +71,6 @@ while True:
         rojo.off()
         morado.off()
         buzzer.off()
-        
         print("alto")
     elif val > 30583 and val<=43690 :
         rojo.on()
@@ -97,7 +94,8 @@ while True:
 tras tener la programacion del microcrontolador y el esquema del circuito, procedimos a pasarlo todo a una protoboard y comprobar el funcionamiento de todo el dispositivo
 ![IMG-20231101-WA0012](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/cd006ca4-e626-4ef7-86d0-6ea3b0fa4b34)
 ![IMG-20231101-WA0009 (1)](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/1882761e-569a-4de6-bbcb-30b5e1bd2889)
-![IMG-20231101-WA0009](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/85a1183e-1c81-49a7-bca1-becaaa5379f0)
+![IMG-20231101-WA0007 (1)](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/7859dd87-f984-44a2-aa87-1661b7eeefd0)
+
 En esas fotos se puede apreciar nuestra felicidad al percaarnos que el ESP-32 estaba haciendo su trabajo a la perfeccion, encendiendo y apagando Leds, dependiendo a la radiacion UV que fuera expuesto el SENSOR, ya solo faltaba empezar a crear la aplicacion
 # Capitulo:PCB
 Sin embargo debido a errores grupales no contabamos con que el proyecto debia realizarse sobre una PCB, por lo cual empezamos a documentarnos sobre el uso de la herramienta KICAD y las 
@@ -140,7 +138,6 @@ Como solucion a esto pasamos todo el codigo del ESP-32 el cual estab en Micropyt
 #error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
 #endif
 BluetoothSerial SerialBT;
-
 const int pin = 25;
 const int verdePin = 21;
 const int amarilloPin = 19;
