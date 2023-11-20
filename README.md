@@ -133,88 +133,66 @@ https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/29cb1
 La otra parte del proyecto no tuvo mayores inconvenientes, si no hasta lampreuba final, ya que .................
 Como solucion a esto pasamos todo el codigo del ESP-32 el cual estab en Micropython, a el lenguaje C.
 # Programacion ESP-32(C)
-#include "BluetoothSerial.h"
-#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
-#error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
-#endif
-BluetoothSerial SerialBT;
-const int pin = 25;
-const int verdePin = 21;
-const int amarilloPin = 19;
-const int naranjaPin = 18;
-const int rojoPin = 5;
-const int moradoPin = 15;
-const int buzzerPin = 23;
-float val;
-void setup() {
-  Serial.begin(9600);
-  SerialBT.begin("PROMEESP32"); //Bluetooth device name
-  SerialBT.println("The device started, now you can pair it with bluetooth!");
-  pinMode(pin, INPUT);
-  pinMode(verdePin, OUTPUT);
-  pinMode(amarilloPin, OUTPUT);
-  pinMode(naranjaPin, OUTPUT);
-  pinMode(rojoPin, OUTPUT);
-  pinMode(moradoPin, OUTPUT);
-  pinMode(buzzerPin, OUTPUT);
-}
+[codigo esp32 micropython.txt](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405605/codigo.esp32.micropython.txt)
+###codigo del controlador ESP-32 y el sensor UV
+import time, machine
+from machine import ADC
+from time import sleep
+pin = machine.Pin(25, machine.Pin.IN)
+verde= machine.Pin(21, machine.Pin.OUT)
+amarillo = machine.Pin(19, machine.Pin.OUT)
+naranja = machine.Pin(18, machine.Pin.OUT)
+rojo = machine.Pin(5, machine.Pin.OUT)
+morado = machine.Pin(15, machine.Pin.OUT)
+buzzer = machine.Pin(23, machine.Pin.OUT)
 
-void loop() {
-  val = (analogRead(pin)* 65335)/ 4095;
-  Serial.println(val);
-  //SerialBT.print(val);
+adc = ADC(pin)
 
-  if (val <= 8738 && val >= 0) {
-    digitalWrite(verdePin, HIGH);
-    digitalWrite(amarilloPin, LOW);
-    digitalWrite(naranjaPin, LOW);
-    digitalWrite(rojoPin, LOW);
-    digitalWrite(moradoPin, LOW);
-    digitalWrite(buzzerPin, LOW);
-    Serial.println("bajo");
-    SerialBT.print("bajo");
-  }
-  else if (val > 8738 && val <= 21845) {
-    digitalWrite(verdePin, LOW);
-    digitalWrite(amarilloPin, HIGH);
-    digitalWrite(naranjaPin, LOW);
-    digitalWrite(rojoPin, LOW);
-    digitalWrite(moradoPin, LOW);
-    digitalWrite(buzzerPin, LOW);
-    Serial.println("moderado");
-    SerialBT.println("moderado");
-  }
-  else if (val > 21845 && val <= 30583) {
-    digitalWrite(verdePin, LOW);
-    digitalWrite(amarilloPin, LOW);
-    digitalWrite(naranjaPin, HIGH);
-    digitalWrite(rojoPin, LOW);
-    digitalWrite(moradoPin, LOW);
-    digitalWrite(buzzerPin, LOW);
-    Serial.println("alto");
-    SerialBT.println("alto");
-  }
-  else if (val > 30583 && val <= 43690) {
-    digitalWrite(rojoPin, HIGH);
-    digitalWrite(verdePin, LOW);
-    digitalWrite(amarilloPin, LOW);
-    digitalWrite(naranjaPin, LOW);
-    digitalWrite(moradoPin, LOW);
-    digitalWrite(buzzerPin, LOW);
-    Serial.println("muy alto");
-    SerialBT.println("muy alto");
-  }
-  else if (val > 43690) {
-    digitalWrite(moradoPin, HIGH);
-    digitalWrite(verdePin, LOW);
-    digitalWrite(amarilloPin, LOW);
-    digitalWrite(naranjaPin, LOW);
-    digitalWrite(rojoPin, LOW);
-    digitalWrite(buzzerPin, HIGH);
-    Serial.println("extremo");
-    SerialBT.println("extremo");
-  }
+while True:
+    val = adc.read_u16()# dependiendo el valor se enciende cada led
+    print(val)
+    if val <= 8738 and val >= 0:
+        verde.on()
+        amarillo.off()
+        naranja.off()
+        rojo.off()
+        morado.off()
+        buzzer.off()
+        print("bajo")
+    elif val > 8738 and val <= 21845:
+        verde.off()
+        amarillo.on()
+        naranja.off()
+        rojo.off()
+        morado.off()
+        buzzer.off()
+        print("moderado")
+    elif val > 21845 and val<= 30583:
+        verde.off()
+        amarillo.off()
+        naranja.on()
+        rojo.off()
+        morado.off()
+        buzzer.off()
+        
+        print("alto")
+    elif val > 30583 and val<=43690 :
+        rojo.on()
+        verde.off()
+        amarillo.off()
+        naranja.off()
+        morado.off()
+        buzzer.off()
+        print("muy alto")
+    elif val > 43690:
+        morado.on()
+        verde.off()
+        amarillo.off()
+        naranja.off()
+        rojo.off()
+        buzzer.on()
+        print("extremo")
+##se enciende la alarma
+    sleep(1)
 
-  delay(1000); 
-}
 # Aplicacion Final:......
