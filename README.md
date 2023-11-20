@@ -23,6 +23,8 @@ Desarrolar un Dispositivo que mediante la lectura del ESP-32 de los datos recogi
 - Materiales para soldar
 - Bateria 9V
 - 5 Leds
+# Proceso Creativo
+Empezariamos, como es debido en todo proceso de creacion tecnologico, con el diagrama de caja negra y el esquema del circuito:
 
 # diagrama de cajas negras
 <img src="https://i.postimg.cc/Vvc1S3F4/diagrama-de-cajas.png">
@@ -30,3 +32,34 @@ Desarrolar un Dispositivo que mediante la lectura del ESP-32 de los datos recogi
 # Esquema del circuito 
 A continuación presentamos el circuito  del dispositivo de detección UV elaborado en kicad.
 <img src="https://i.postimg.cc/bJVkp9Hz/esquema-en-kicad.png">
+# Programacion del ESP-32 (Micropython)
+
+# Version (Protoboard)
+tras tener la programacion del microcrontolador y el esquema del circuito, procedimos a pasarlo todo a una protoboard y comprobar el funcionamiento de todo el dispositivo
+
+
+
+En esas fotos se puede apreciar nuestra felicidad al percaarnos que el ESP-32 estaba haciendo su trabajo a la perfeccion, encendiendo y apagando Leds, dependiendo a la radiacion UV que fuera expuesto el SENSOR, ya solo faltaba empezar a crear la aplicacion
+# Capitulo:PCB
+Sin embargo debido a errores grupales no contabamos con que el proyecto debia realizarse sobre una PCB, por lo cual empezamos a documentarnos sobre el uso de la herramienta KICAD y las 
+ librerias necesarias para armar el Esquema de la PCB para posteriormente mandarla a fabricar
+Primera Version de la PCB:(Error)
+
+Segunda Version:(Error)
+
+PCB FINAL:
+
+
+# Componentes en la PCB.....
+Despues de tener Todos los materiales necesarios, nos vimos ante el reto de la soldadura puesto que ninguno tenia la experticia ni la tecnica para esta, sin embargo tras dedicarle bastante y con ayuda del profesor Johnny, logramos soldar todos los componenetes del dispositivo de manera correcta en la PCB:
+
+Soldadura:
+
+Dispositivo Final:
+# Prueba ¿Final?:
+Tras el armado del Dispositivo fisico procedimos a probarlo, y tras un primer fallo debido a un error de digitalizacion de un pin en el codgio, no obtuvimos el resultado esperado, sin embargo despues de corregir este error, obtuvimos lo que queriamos:
+
+# La aplicacion:
+La otra parte del proyecto no tuvo mayores inconvenientes, si no hasta lampreuba final, ya que .................
+Como solucion a esto pasamos todo el codigo del ESP-32 el cual estab en Micropython, a el lenguaje C.
+# Aplicacion Final:
