@@ -46,14 +46,13 @@ En esas fotos se puede apreciar nuestra felicidad al percaarnos que el ESP-32 es
 ## Capitulo:PCB
 Sin embargo debido a errores grupales no contabamos con que el proyecto debia realizarse sobre una PCB, por lo cual empezamos a documentarnos sobre el uso de la herramienta KICAD y las 
  librerias necesarias para armar el Esquema de la PCB para posteriormente mandarla a fabricar
-- Primera Version de la PCB:(Error)
-![image-1](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/b3865dde-5675-484d-9549-cda3c17796f7)
+###  Primera Version de la PCB:(Error)<br>
+![image-1](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/b3865dde-5675-484d-9549-cda3c17796f7)<br>
+![image-2](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/515148cc-6562-42b6-9f1c-198dca20f6c6)<br>
 
+- Segunda Version: 
 
-- Segunda Version:(Error)
-![image-2](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/515148cc-6562-42b6-9f1c-198dca20f6c6)
-
-## PCB FINAL:
+### PCB FINAL:
 ![image](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/33144e16-bc5f-4f5a-9cc6-ff85843e0b53)
 ![IMG-20231119-WA0025](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/1a7ce271-ddc5-4419-be28-f555582dc895)
 ## Archivo PCB:
