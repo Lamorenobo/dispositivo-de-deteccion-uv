@@ -37,10 +37,10 @@ A continuación presentamos el circuito  del dispositivo de detección UV elabor
 
 
 ## Version (Protoboard)
-tras tener la programacion del microcrontolador y el esquema del circuito, procedimos a pasarlo todo a una protoboard y comprobar el funcionamiento de todo el dispositivo
-![IMG-20231101-WA0012](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/cd006ca4-e626-4ef7-86d0-6ea3b0fa4b34)
-![IMG-20231101-WA0009 (1)](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/1882761e-569a-4de6-bbcb-30b5e1bd2889)
-![IMG-20231101-WA0007 (1)](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/7859dd87-f984-44a2-aa87-1661b7eeefd0)
+tras tener la programacion del microcrontolador y el esquema del circuito, procedimos a pasarlo todo a una protoboard y comprobar el funcionamiento de todo el dispositivo<br>
+![IMG-20231101-WA0012](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/cd006ca4-e626-4ef7-86d0-6ea3b0fa4b34) <br>
+![IMG-20231101-WA0009 (1)](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/1882761e-569a-4de6-bbcb-30b5e1bd2889) <br>
+![IMG-20231101-WA0007 (1)](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/7859dd87-f984-44a2-aa87-1661b7eeefd0)<br>
 
 En esas fotos se puede apreciar nuestra felicidad al percaarnos que el ESP-32 estaba haciendo su trabajo a la perfeccion, encendiendo y apagando Leds, dependiendo a la radiacion UV que fuera expuesto el SENSOR, ya solo faltaba empezar a crear la aplicacion
 ## Capitulo:PCB
