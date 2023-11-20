@@ -1,4 +1,4 @@
-# Dispositivo de detección uv
+[codigo esp32 micropython (1).txt](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405623/codigo.esp32.micropython.1.txt)# Dispositivo de detección uv
 Nuestro dispositivo detecta la rediacion uv, y envia esta señal a una app en la cual dependiendo de el rango de  la radiacion se muestran las prevenciones que hay que tener para prevenir afectaciones por rayos UV
 ## Introducción
 Nuestro proyecto consiste en un dispositivo capaz de detectar la radiacion UV, el cual envia unas señales al microcontrolador(ESP-32, programado en C), y dependiendo el rango de intensidad de radiacion UV, se encarga de prender o apagar unos leds en el dispositivo los cuales  indican la peligrosidad de la radiacion en ese momento especifico. Paralelamente a esto,mediante la conexion Bluetooth entre el esp 32 y el celular, se le indica al usario las prevenciones que deberia tomar de acuerdo al indice de radiación UV que este indicando el microcontrolador, todo esto a travez de una aplicacion programada en app inventor.
@@ -33,7 +33,7 @@ Empezariamos, como es debido en todo proceso de creacion tecnologico, con el dia
 A continuación presentamos el circuito  del dispositivo de detección UV elaborado en kicad.
 <img src="https://i.postimg.cc/bJVkp9Hz/esquema-en-kicad.png">
 # Programacion del ESP-32 (Micropython)
-
+[Uploading codigo###codigo del controlador ESP-32 y el sensor UV
 import time, machine
 from machine import ADC
 from time import sleep
@@ -44,7 +44,9 @@ naranja = machine.Pin(18, machine.Pin.OUT)
 rojo = machine.Pin(5, machine.Pin.OUT)
 morado = machine.Pin(15, machine.Pin.OUT)
 buzzer = machine.Pin(23, machine.Pin.OUT)
+
 adc = ADC(pin)
+
 while True:
     val = adc.read_u16()# dependiendo el valor se enciende cada led
     print(val)
@@ -71,6 +73,7 @@ while True:
         rojo.off()
         morado.off()
         buzzer.off()
+        
         print("alto")
     elif val > 30583 and val<=43690 :
         rojo.on()
@@ -90,6 +93,9 @@ while True:
         print("extremo")
 ##se enciende la alarma
     sleep(1)
+ esp32 micropython (1).txt…]()
+
+
 # Version (Protoboard)
 tras tener la programacion del microcrontolador y el esquema del circuito, procedimos a pasarlo todo a una protoboard y comprobar el funcionamiento de todo el dispositivo
 ![IMG-20231101-WA0012](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/cd006ca4-e626-4ef7-86d0-6ea3b0fa4b34)
@@ -136,6 +142,5 @@ Como solucion a esto pasamos todo el codigo del ESP-32 el cual estab en Micropyt
 [codigo esp32 micropython.txt](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405605/codigo.esp32.micropython.txt)
 
 ##se enciende la alarma
-    sleep(1)
 
 # Aplicacion Final:......
