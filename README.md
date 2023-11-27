@@ -7,7 +7,7 @@ Despues de realizar un analisis profundo al clima de la ciudad de Bogota, nos di
 # Objetivo General
 Desarrolar un Dispositivo que mediante la lectura del ESP-32 de los datos recogidos por el sensor UV, prenda determiando led indicando la intensidad de radiación UV en tiempo real y por conexión Bluetooth enviar esta información a un aplicativo movil.
 ## Objetivos específicos
-- Programar el microcontrolador y configurar la conectividad Bluetooth 
+- Programar el microcontrolador y configurar la conectividad Wi-Fi
 - Programar una aplicación que indique al usuario las precauciones que debería tomar, dependiendo la intensidad de radiacion UV en tiempo real
 - Hacer en KICAD el Diseño de la placa (PCB) en la cual van a ir montados los componentes
 - Hacer las respectivas pruebas del artefacto
