@@ -56,9 +56,6 @@ Sin embargo debido a errores grupales no contabamos con que el proyecto debia re
 ![image](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/33144e16-bc5f-4f5a-9cc6-ff85843e0b53)
 ![IMG-20231119-WA0025](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/assets/142939223/1a7ce271-ddc5-4419-be28-f555582dc895)
 
-## Archivo PCB:
-[proyectointroducción (1).zip](https://github.com/Lamorenobo/dispositivo-de-deteccion-uv/files/13405660/proyectointroduccion.1.zip)<br>
-
 
 ### Componentes en la PCB.....
 Despues de tener Todos los materiales necesarios, nos vimos ante el reto de la soldadura puesto que ninguno tenia la experticia ni la tecnica para esta, sin embargo tras dedicarle bastante y con ayuda del profesor Johnny, logramos soldar todos los componenetes del dispositivo de manera correcta en la PCB:
